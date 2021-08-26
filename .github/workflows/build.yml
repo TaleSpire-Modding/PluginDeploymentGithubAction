@@ -28,7 +28,7 @@ jobs:
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: 4.7.2
+          dotnet-version: 4.7.x
 
       - name: Check out my other private repo
         uses: actions/checkout@master
