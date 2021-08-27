@@ -25,14 +25,15 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       
-      - name: Setup .NET Framework
-        uses: auycro/netframework-action-template@v0.0.2
-
+      # Checks-out your private repo of dll's
       - name: Check out my other private repo
         uses: actions/checkout@master
         with:
           repository: TaleSpire-Modding/AutomationDlls
           token: ${{ secrets.my_pat }}
           
+      # - name: Setup .NET Framework
+      #   uses: auycro/netframework-action-template@v0.0.2
+        
       - name: Install dependencies
         run: dotnet restore
