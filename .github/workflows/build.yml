@@ -32,4 +32,9 @@ jobs:
           repository: TaleSpire-Modding/AutomationDlls
           token: ${{ secrets.dll_pat }}
       - name: List
-        run: dir
+        run: |
+          dir
+          ls
+          cd BepinexDlls
+          dir
+          ls
